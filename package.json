@@ -16,6 +16,14 @@
       {
         "command": "smart-markdown-link-url-title.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "smart-markdown-link-url-title.detectUrlAtCursor",
+        "title": "Markdown: Detect URL at Cursor"
+      },
+      {
+        "command": "smart-markdown-link-url-title.detectUrlsInSelection",
+        "title": "Markdown: Detect URLs in Selection"
       }
     ]
   },
