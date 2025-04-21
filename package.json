@@ -27,6 +27,8 @@
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src",
     "test": "vscode-test",
+    "prettier": "prettier ./**/*.{js,json,ts,md} --write",
+    "format:check": "prettier ./**/*.{js,json,ts,md} --debug-check",
     "pre-commit": "lint-staged",
     "prepare": "husky"
   },
@@ -43,6 +45,7 @@
     "eslint": "^9.23.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   }
 }
