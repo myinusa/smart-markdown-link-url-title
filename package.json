@@ -24,6 +24,10 @@
       {
         "command": "smart-markdown-link-url-title.detectUrlsInSelection",
         "title": "Markdown: Detect URLs in Selection"
+      },
+      {
+        "command": "smart-markdown-link-url-title.fetchTitleForUrl",
+        "title": "Markdown: Fetch Title for URL"
       }
     ]
   },
@@ -35,16 +39,24 @@
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src",
     "test": "vscode-test",
+    "test:unit": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "prettier": "prettier ./**/*.{js,json,ts,md} --write",
     "format:check": "prettier ./**/*.{js,json,ts,md} --debug-check",
     "pre-commit": "lint-staged",
     "prepare": "husky"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "node-html-parser": "^6.1.12"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
+    "@types/node-fetch": "^2.6.11",
     "@types/vscode": "^1.99.0",
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
@@ -54,6 +66,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.2"
   }
 }
